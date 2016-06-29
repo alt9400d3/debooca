@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block login %}
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+    <div class="body-container">
+        <div class="row">
+    <form action="/auth/register/" method="post" class="form-horizontal" role="form" >
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <button type="button submit" class="btn btn-large btn-block btn-primary">Зарегистрироваться</button>
+    </form></div>
+        <div class="col-lg-2"></div>
+        </div>
+        {% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block login %}
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+    <div class="body-container">
+        {% if user.is_authenticated %}
+        Тут будет профиль пользователя
+        {% else %}
+        Пожалуйста, авторизуйтесь для просмотра профиля.
+        {% endif %}
+    </div>
+</div>
+<div class="col-lg-2"></div>
+
+{% endblock %}
