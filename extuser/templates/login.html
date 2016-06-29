@@ -1,25 +1,52 @@
 {% extends 'main.html' %}
 
-{% block login %}
-<div class="col-lg-2"></div>
-<div class="col-lg-8">
-    <div class="body-container">
-        <form action="/auth/login/" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="exampleInputEmail1">Почтовый ящик:</label>
-                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Пароль:</label>
-                <input type="password" class="form-control" name="password"  id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="row">
-                <button type="button submit" class="btn btn-large btn-block btn-primary">Вход</button>
-            </div>
-        </form>
-    </div>
-    </div>
-    <div class="col-lg-2"></div>
+{% block content %}
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="/">Главная</a></li>
+        <li class="active">Авторизация</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-xs-12 maincontent">
 
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="thin text-center">Пожалуйста, войдите в свой аккаунт.</h3>
+                        <p class="text-center text-muted">Если у Вас еще нет своего аккаунта, то Вы можете <a href="/auth/register/">зарегистрировать</a> его. </p>
+                        <hr>
+
+                        <form action="/auth/login/" method="post">
+                            {% csrf_token %}
+                            <div class="top-margin">
+                                <label>Username/Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="top-margin">
+                                <label>Password <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" name="password"  id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <b><a href="">Забыли пароль?</a></b>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-action" type="submit">Вход</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+        <!-- /Article -->
+
+    </div>
+</div>	<!-- /container -->
 {% endblock %}

@@ -13,8 +13,8 @@ def login(request):
     args = {}
     args.update(csrf(request))
     if request.POST:
-        username = request.POST.get('email', '')
-        password = request.POST.get('password', '')
+        username = request.POST.get('email'.encode('ascii','ignore'), '')
+        password = request.POST.get('password'.encode('ascii','ignore'), '')
         user = auth.authenticate(email=username, password=password)
         if user is not None:
             auth.login(request, user)
