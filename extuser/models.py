@@ -29,6 +29,12 @@ class UserManager(BaseUserManager):
 
 class ExtUser(AbstractBaseUser, PermissionsMixin):
 
+    login = models.EmailField(
+        'Логин',
+        max_length=15,
+        unique=True,
+        db_index=True
+    )
     email = models.EmailField(
         'Электронная почта',
         max_length=255,
@@ -47,9 +53,21 @@ class ExtUser(AbstractBaseUser, PermissionsMixin):
         null=False,
         blank=True
     )
-    clubname = models.CharField(
-        'Танцевальный клуб',
+    city = models.CharField(
+        'Город',
         max_length=100,
+        null=True,
+        blank=True
+    )
+    country = models.CharField(
+        'Страна',
+        max_length=100,
+        null=True,
+        blank=True
+    )
+    user_information = models.CharField(
+        'Информация о пользователе',
+        max_length=500,
         null=True,
         blank=True
     )

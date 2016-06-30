@@ -16,7 +16,6 @@ class UserAdmin(UserAdmin):
         'email',
         'is_admin',
         'name',
-        'clubname',
     ]
 
     list_filter = ('is_admin',)
@@ -27,7 +26,7 @@ class UserAdmin(UserAdmin):
             'fields': (
                 'avatar',
                 'date_of_birth',
-                'name','clubname',
+                'name',
             )}),
         ('Permissions', {'fields': ('is_admin',)}),
         ('Important dates', {'fields': ('last_login',)}),

@@ -6,6 +6,10 @@ from django.contrib.auth import get_user_model
 
 
 class UserCreationForm(forms.ModelForm):
+    login = forms.CharField(
+        label='Логин',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
     email = forms.CharField(
         label='Электронная почта',
         widget=forms.TextInput(attrs={'class':'form-control'})
@@ -22,14 +26,6 @@ class UserCreationForm(forms.ModelForm):
         label='Подтверждение',
         widget=forms.PasswordInput(attrs={'class':'form-control'})
     )
-    clubname = forms.CharField(
-        label='Танцевальный клуб',
-        widget=forms.TextInput(attrs={'class':'form-control'}),
-        required=False
-    )
-
-
-
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
@@ -41,8 +37,9 @@ class UserCreationForm(forms.ModelForm):
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.set_password(self.cleaned_data['password1'])
-        user.clubname=self.cleaned_data['clubname']
+        user.login=self.cleaned_data['login']
         user.name=self.cleaned_data['name']
+        user.city=self.cleaned_data['city']
         if commit:
             user.save()
         return user
@@ -50,6 +47,127 @@ class UserCreationForm(forms.ModelForm):
     class Meta:
         model = get_user_model()
         fields = ('email',)
+
+class UserCreationForm1(forms.ModelForm):
+    login = forms.CharField(
+        label='Логин',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    email = forms.CharField(
+        label='Электронная почта',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    name = forms.CharField(
+        label='Ф.И.О.',
+        widget=forms.TextInput(attrs={'class':'form-control'}),
+    )
+    country = forms.CharField(
+        label='Страна',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    city = forms.CharField(
+        label='Город',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    user_information = forms.CharField(
+        label='Информация о пользователе',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+
+    def save(self, commit=True):
+        user = super(UserCreationForm1, self).save(commit=False)
+        user.set_password(self.cleaned_data['password1'])
+        user.login=self.cleaned_data['login']
+        user.name=self.cleaned_data['name']
+        user.city=self.cleaned_data['city']
+        if commit:
+            user.save()
+        return user
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email','name','city','country','user_information', 'login', )
+
+
+class UserCreationForm2(forms.ModelForm):
+    login = forms.CharField(
+        label='Логин',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    email = forms.CharField(
+        label='Электронная почта',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    name = forms.CharField(
+        label='Ф.И.О.',
+        widget=forms.TextInput(attrs={'class':'form-control'}),
+    )
+    country = forms.CharField(
+        label='Страна',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    city = forms.CharField(
+        label='Город',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    user_information = forms.CharField(
+        label='Информация о пользователе',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+
+    def save(self, commit=True):
+        user = super(UserCreationForm2, self).save(commit=False)
+        user.login=self.cleaned_data['login']
+        user.name=self.cleaned_data['name']
+        user.city=self.cleaned_data['city']
+        if commit:
+            user.save()
+        return user
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email','name','city','country','user_information', )
+
+
+
+class UserEditForm(forms.ModelForm):
+    # login = forms.CharField(
+    #     label='Логин',
+    #     widget=forms.TextInput(attrs={'class':'form-control'})
+    # )
+    email = forms.CharField(
+        label='Электронная почта',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    name = forms.CharField(
+        label='Ф.И.О.',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    country = forms.CharField(
+        label='Страна',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    city = forms.CharField(
+        label='Город',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+    user_information = forms.CharField(
+        label='Информация о пользователе',
+        widget=forms.TextInput(attrs={'class':'form-control'})
+    )
+
+    def save(self, commit=True):
+        user = super(UserEditForm, self).save(commit=False)
+        user.set_password(self.cleaned_data['password1'])
+        user.login=self.cleaned_data['login']
+        user.name=self.cleaned_data['name']
+        if commit:
+            user.save()
+        return user
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email','name','city','country','user_information',)
 
 
 class UserChangeForm(forms.ModelForm):
