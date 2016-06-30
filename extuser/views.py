@@ -73,7 +73,7 @@ def register(request):
     args.update(csrf(request))
     args['form'] = UserCreationForm()
     if request.POST:
-        newuser_form = UserCreationForm(request.POST)
+        newuser_form = UserCreationForm1(request.POST)
         if newuser_form.is_valid():
             newuser_form.save()
             newuser = auth.authenticate(email=newuser_form.cleaned_data['email'], password=newuser_form.cleaned_data['password2'])
