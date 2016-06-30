@@ -18,6 +18,10 @@ class UserCreationForm(forms.ModelForm):
         label='Ф.И.О.',
         widget=forms.TextInput(attrs={'class':'form-control'}),
     )
+    city = forms.CharField(
+        label='Город',
+        widget=forms.TextInput(attrs={'class':'form-control'}),
+    )
     password1 = forms.CharField(
         label='Пароль',
         widget=forms.PasswordInput(attrs={'class':'form-control'})

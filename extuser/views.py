@@ -11,6 +11,7 @@ from django.http import HttpResponseRedirect
 def login(request):
     args = {}
     args.update(csrf(request))
+    args['user'] = auth.get_user(request)
     if request.POST:
         username = request.POST.get('email'.encode('ascii','ignore'), '')
         password = request.POST.get('password'.encode('ascii','ignore'), '')
@@ -71,9 +72,10 @@ def logout(request):
 def register(request):
     args = {}
     args.update(csrf(request))
+    args['user'] = auth.get_user(request)
     args['form'] = UserCreationForm()
     if request.POST:
-        newuser_form = UserCreationForm1(request.POST)
+        newuser_form = UserCreationForm(request.POST)
         if newuser_form.is_valid():
             newuser_form.save()
             newuser = auth.authenticate(email=newuser_form.cleaned_data['email'], password=newuser_form.cleaned_data['password2'])
