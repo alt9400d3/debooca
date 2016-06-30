@@ -70,9 +70,7 @@ class ExtUser(AbstractBaseUser, PermissionsMixin):
         'Суперпользователь',
         default=False
     )
-    is_organizer = models.BooleanField(
-        'Организатор',
-        default=False)
+
 
     # Этот метод обязательно должен быть определён
     def get_full_name(self):

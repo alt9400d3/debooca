@@ -5,10 +5,6 @@ from django.contrib import auth
 from django.core.context_processors import csrf
 from extuser.forms import UserCreationForm
 
-
-
-
-
 def login(request):
     args = {}
     args.update(csrf(request))
@@ -30,8 +26,6 @@ def profile(request):
     args.update(csrf(request))
     args['user'] = auth.get_user(request)
     return render_to_response('profile.html', args)
-
-
 
 def logout(request):
     auth.logout(request)
