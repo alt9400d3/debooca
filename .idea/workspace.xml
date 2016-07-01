@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b7f3c5-e249-4b41-9e78-95941fd59c1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" afterPath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/static/js/main.js" afterPath="$PROJECT_DIR$/debooca/static/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/templates/main.html" afterPath="$PROJECT_DIR$/debooca/templates/main.html" />
     </list>
     <ignored path="debooca.iws" />
@@ -81,21 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6166395">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state vertical-scroll-proportion="-9.37037">
+              <caret line="269" column="14" selection-start-line="269" selection-start-column="14" selection-end-line="269" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar-fixed-top.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navbar-fixed-top.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="448" column="0" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.915625">
+              <caret line="453" column="4" selection-start-line="453" selection-start-column="4" selection-end-line="453" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -160,8 +158,8 @@
         <option value="$PROJECT_DIR$/extuser/forms.py" />
         <option value="$PROJECT_DIR$/debooca/urls.py" />
         <option value="$PROJECT_DIR$/debooca/static/js/main.js" />
-        <option value="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" />
         <option value="$PROJECT_DIR$/debooca/templates/main.html" />
+        <option value="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" />
       </list>
     </option>
   </component>
@@ -173,8 +171,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1415" />
-    <option name="y" value="24" />
+    <option name="x" value="49" />
+    <option name="y" value="-744" />
     <option name="width" value="1317" />
     <option name="height" value="744" />
   </component>
@@ -789,7 +787,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1415" y="24" width="1317" height="744" extended-state="6" />
+    <frame x="49" y="-744" width="1317" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -961,6 +959,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,6 +1143,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,18 +1227,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
+    <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="448" column="0" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.37037">
+          <caret line="269" column="14" selection-start-line="269" selection-start-column="14" selection-end-line="269" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
+    <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6166395">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.915625">
+          <caret line="453" column="4" selection-start-line="453" selection-start-column="4" selection-end-line="453" selection-end-column="4" />
           <folding />
         </state>
       </provider>

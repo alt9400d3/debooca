@@ -30,7 +30,8 @@
                 <i class="fa fa-chevron-down faa-vertical animated"></i>
             </a>
             <a tabindex="0" class="navbar-brand faa-pulse faa-slow animated" data-toggle="popover" data-trigger="focus" data-html="true" data-placement="bottom" data-title="Brand Quote..." data-content="<img class='img-responsive' height='140' width='140' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='/<p>Your Brand Image</p>">
-                <i class="fa fa-balance-scale"></i>
+                <!--<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>-->
+                <i class="fa fa-book"></i>
                 <i class="fa fa-lg">D</i>
                 <i class="fa fa-lg">E</i>
                 <i class="fa fa-lg">B</i>
@@ -96,8 +97,21 @@
                     </a>
                 </li>
             </ul>
+
+
+
             <ul class="nav navbar-nav navbar-right">
-                <li><p class="navbar-text">Already have an account?</p></li>
+                {% if user.is_authenticated %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class=""><a href="/auth/profile/"><i class="fa fa-cogs"></i> Profile</a></li>
+                        <li><a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                    </ul>
+                </li>
+                {% else %}
+
+                <li><p class="navbar-text">У Вас есть аккаунт?</p></li>
                 <li class="dropdown">
 
                     <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
@@ -109,39 +123,41 @@
                         <li>
                             <div class="row">
                                 <div class="col-md-12">
-                                    Login via
+                                    Авторизуйтесь при помощи:
                                     <div class="social-buttons">
                                         <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                     </div>
-                                    or
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    или
+                                    <form class="form" role="form" action="/auth/login/" method="post" accept-charset="UTF-8" id="login-nav">
+                                        {% csrf_token %}
                                         <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                            <input type="text" class="form-control" name="email" placeholder="Email">
                                         </div>
                                         <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            <label class="sr-only" for="exampleInputPassword2">Пароль</label>
+                                            <input type="password" class="form-control" name="password" placeholder="Password">
+                                            <div class="help-block text-right"><a href="">Забыли пароль?</a></div>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            <button type="submit" class="btn btn-primary btn-block">Вход</button>
                                         </div>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox"> keep me logged-in
+                                                <input type="checkbox"> Запомнить меня.
                                             </label>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="bottom text-center">
-                                    New here ? <a href="#"><b>Join Us</b></a>
+                                    Нет аккаунта? <a href="/auth/register/"><b>Регистрация</b></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>
