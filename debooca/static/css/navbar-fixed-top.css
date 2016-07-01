@@ -453,3 +453,9 @@ a:hover .fa
     border-radius: 5px;
     padding: 20px;
 }
+.back-to-top {
+    cursor: pointer;
+
+
+position: fixed; left: 1%; top: 50%; right: 96%;
+}
