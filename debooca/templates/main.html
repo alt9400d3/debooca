@@ -9,8 +9,9 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="http://bootstrap-3.ru/assets/ico/favicon.ico">
     <title>My registrations</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">-->
     <link href="{% static "css/navbar-fixed-top.css" %}" rel="stylesheet">
     <!--<script src="{% static "css/bootstrap.min.css" %}"></script> >-->
     <!--<script src="{% static "css/navbar-fixed-top.css" %}"></script> >-->
@@ -22,111 +23,234 @@
 </head>
 
 <body>
-<div id="wrap">
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top"">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">MyReg.only</a>
+            <a class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse">
+                <i class="fa fa-chevron-down faa-vertical animated"></i>
+            </a>
+            <a tabindex="0" class="navbar-brand faa-pulse faa-slow animated" data-toggle="popover" data-trigger="focus" data-html="true" data-placement="bottom" data-title="Brand Quote..." data-content="<img class='img-responsive' height='140' width='140' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='/<p>Your Brand Image</p>">
+                <i class="fa fa-balance-scale"></i>
+                <i class="fa fa-lg">D</i>
+                <i class="fa fa-lg">E</i>
+                <i class="fa fa-lg">B</i>
+                <i class="fa fa-lg">O</i>
+                <i class="fa fa-lg">O</i>
+                <i class="fa fa-lg">C</i>
+                <i class="fa fa-lg">A</i>
+                <i class="fa fa-lg">.</i>
+                <i class="fa fa-lg">C</i>
+                <i class="fa fa-lg">O</i>
+                <i class="fa fa-lg">M</i>
+            </a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                {% if user.is_admin %}
-                <li class="dropdown">
-                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Новости
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/">Читать новости</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/news/addnews/">Добавить новость</a></li>
-                    </ul>
-                </li>
-                {% else %}
                 <li>
-                    <a href="/">Новости сайта</a>
-                </li>
-                {% endif %}{% if user.is_admin %}
-                <li class="dropdown">
-                    <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Турниры
-                        <span class="caret"></span>
+                    <a class="faa-parent animated-hover">
+                        <i class="fa fa-fw fa-lg fa-home faa-tada faa-fast"></i>Home
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/context/">Рассписание турниров</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/context/addcontext/">Добавить турнир</a></li>
-                    </ul>
                 </li>
-                {% else %}
                 <li>
-                    <a href="/context/">Рассписание турниров</a>
-                </li>
-                {% endif %}
-                {% if user.is_authenticated %}
-                <li class="dropdown">
-                    <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Танцоры клуба
-                        <span class="caret"></span>
+                    <a class="faa-parent animated-hover">
+                        <i class="fa fa-fw fa-lg fa-quote-left faa-tada faa-fast"></i>About Us
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/dancers/">Участники клуба</a></li>
-
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
+                        <i class="fa fa-fw fa-lg fa-th faa-tada faa-fast"></i>Products
+                        <span class="fa fa-caret-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="faa-parent animated-hover">
+                                <i class="fa fa-fw fa-level-down faa-tada faa-fast"></i>Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="faa-parent animated-hover">
+                                <i class="fa fa-fw fa-external-link faa-tada faa-fast"></i>Individual
+                            </a>
+                        </li>
+                        <li>
+                            <a class="faa-parent animated-hover">
+                                <i class="fa fa-fw fa-search faa-tada faa-fast"></i>Search
+                            </a>
+                        </li>
+                        <li>
+                            <a class="faa-parent animated-hover">
+                                <i class="fa fa-fw fa-file-pdf-o faa-tada faa-fast"></i>Product Detail
+                            </a>
+                        </li>
                         <li class="divider"></li>
-                        <li><a href="/dancers/adddancer/">Добавить танцора</a></li>
+                        <li>
+                            <a class="faa-parent animated-hover">
+                                <i class="fa fa-fw fa-flag faa-tada faa-fast"></i>Specification
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                {% endif %}
+                <li>
+                    <a class="faa-parent animated-hover">
+                        <i class="fa fa-fw fa-lg fa-map-marker faa-tada faa-fast"></i>Contact Us
+                    </a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                {% if user.is_authenticated %}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }}<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class=""><a href="/auth/profile/"><i class="fa fa-cogs"></i> Profile</a></li>
-                            <li><a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li>
-                        </ul>
-                    </li>
-                {% else %}
-                <li><form action="/auth/login/" method="post" class="navbar-form navbar-right">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="email" placeholder="Email">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign In</button>
-                    <a href="/auth/register/" class="btn btn-primary">Sign Up</a>
-                </form></li>
-                {% endif %}
-            </ul>
+                <li><p class="navbar-text">Already have an account?</p></li>
+                <li class="dropdown">
 
-            <!--<ul class="nav navbar-nav navbar-right">-->
-                <!--{% if user.is_authenticated %}-->
+                    <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
+                        <i class="fa fa-fw fa-lg fa-sign-in faa-tada faa-fast"></i>LogIn<span class="caret"></span>
+                    </a>
+
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>-->
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Login via
+                                    <div class="social-buttons">
+                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    or
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> keep me logged-in
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    New here ? <a href="#"><b>Join Us</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--<div id="wrap">-->
+<!--&lt;!&ndash; Fixed navbar &ndash;&gt;-->
+<!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="/">Debooca.com</a>-->
+        <!--</div>-->
+        <!--<div class="navbar-collapse collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--{% if user.is_admin %}-->
                 <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }} <b class="caret"></b></a>-->
+                    <!--<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                        <!--Новости-->
+                        <!--<span class="caret"></span>-->
+                    <!--</a>-->
                     <!--<ul class="dropdown-menu">-->
-                        <!--<li><ul class="list-inline">-->
-                            <!--<li><a href="/auth/logout/">sdv</a>-->
-                            <!--<a href="/auth/logout/">Выход</a></li>-->
-                        <!--</ul></li>-->
-                        <!--<li><a href="/auth/logout/">Выход</a></li>-->
+                        <!--<li><a href="/">Читать новости</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="/news/addnews/">Добавить новость</a></li>-->
                     <!--</ul>-->
                 <!--</li>-->
                 <!--{% else %}-->
-                   <!--<li><a href="/auth/login/">SIGN IN / SIGN UP</a></li>-->
+                <!--<li>-->
+                    <!--<a href="/">Новости сайта</a>-->
+                <!--</li>-->
+                <!--{% endif %}{% if user.is_admin %}-->
+                <!--<li class="dropdown">-->
+                    <!--<a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                        <!--Турниры-->
+                        <!--<span class="caret"></span>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="/context/">Рассписание турниров</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="/context/addcontext/">Добавить турнир</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--{% else %}-->
+                <!--<li>-->
+                    <!--<a href="/context/">Рассписание турниров</a>-->
+                <!--</li>-->
+                <!--{% endif %}-->
+                <!--{% if user.is_authenticated %}-->
+                <!--<li class="dropdown">-->
+                    <!--<a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                        <!--Танцоры клуба-->
+                        <!--<span class="caret"></span>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="/dancers/">Участники клуба</a></li>-->
+
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="/dancers/adddancer/">Добавить танцора</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
                 <!--{% endif %}-->
             <!--</ul>-->
-        </div><!--/.nav-collapse -->
-    </div>
-</div>
-</div>
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--{% if user.is_authenticated %}-->
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }}<span class="caret"></span></a>-->
+                        <!--<ul class="dropdown-menu" role="menu">-->
+                            <!--<li class=""><a href="/auth/profile/"><i class="fa fa-cogs"></i> Profile</a></li>-->
+                            <!--<li><a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--{% else %}-->
+                <!--<li><form action="/auth/login/" method="post" class="navbar-form navbar-right">-->
+                    <!--{% csrf_token %}-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control" name="email" placeholder="Email">-->
+                        <!--<input type="password" class="form-control" name="password" placeholder="Password">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-success">Sign In</button>-->
+                    <!--<a href="/auth/register/" class="btn btn-primary">Sign Up</a>-->
+                <!--</form></li>-->
+                <!--{% endif %}-->
+            <!--</ul>-->
+
+            <!--&lt;!&ndash;<ul class="nav navbar-nav navbar-right">&ndash;&gt;-->
+                <!--&lt;!&ndash;{% if user.is_authenticated %}&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="dropdown">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }} <b class="caret"></b></a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<ul class="dropdown-menu">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><ul class="list-inline">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li><a href="/auth/logout/">sdv</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="/auth/logout/">Выход</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</ul></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="/auth/logout/">Выход</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;{% else %}&ndash;&gt;-->
+                   <!--&lt;!&ndash;<li><a href="/auth/login/">SIGN IN / SIGN UP</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
 <div class="container">
     <div class="row" id="content">
         <div class="col-lg-12">

@@ -1,4 +1,4 @@
-
+$(function(){$('[data-toggle="popover"]').popover()});
 $(document).ready(function () {
     $('#context_dancer_name').focus(
 
