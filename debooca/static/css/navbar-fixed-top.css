@@ -1,6 +1,5 @@
 {% load staticfiles %}
 body {
-padding-top: 70px;
 background: url(../img/7.jpg) repeat center center scroll ;
 
 

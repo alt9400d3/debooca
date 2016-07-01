@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top"">
+<nav class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse">
@@ -269,7 +269,7 @@
 <!--</div>-->
 <div class="container">
     <div class="row" id="content">
-        <div class="col-lg-12">
+        <div class="col-lg-12"><a id="back-to-top" href="#" class="back-to-top" role="button" data-toggle="tooltip" data-placement="left" ><img src="{% static "img/btn_top.png" %}" width="25" height="25"></a>
             {% block content %}{% endblock %}
         </div>
     </div>
@@ -282,6 +282,7 @@
 <!--<script src="http://django-alt9400d3.rhcloud.com/static/js/main.js"></script>-->
 <script>
 $(document).ready(function(){
+     $('#back-to-top').fadeOut();
      $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('#back-to-top').fadeIn();
@@ -303,6 +304,6 @@ $(document).ready(function(){
 });
 </script>
 
-<a id="back-to-top" href="#" class="back-to-top" role="button" data-toggle="tooltip" data-placement="left" ><img src="{% static "img/btn_top.png" %}" width="25" height="25"></a>
+
 </body>
 </html>

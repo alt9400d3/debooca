@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b7f3c5-e249-4b41-9e78-95941fd59c1d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" afterPath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/templates/main.html" afterPath="$PROJECT_DIR$/debooca/templates/main.html" />
     </list>
@@ -81,8 +82,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8107667">
-              <caret line="305" column="172" selection-start-line="305" selection-start-column="172" selection-end-line="305" selection-end-column="172" />
+            <state vertical-scroll-proportion="0.14845024">
+              <caret line="284" column="32" selection-start-line="284" selection-start-column="22" selection-end-line="284" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -92,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="23" />
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -1218,6 +1219,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/debooca/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1226,18 +1235,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8107667">
-          <caret line="305" column="172" selection-start-line="305" selection-start-column="172" selection-end-line="305" selection-end-column="172" />
+        <state vertical-scroll-proportion="0.14845024">
+          <caret line="284" column="32" selection-start-line="284" selection-start-column="22" selection-end-line="284" selection-end-column="32" />
           <folding />
         </state>
       </provider>
