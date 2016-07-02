@@ -167,44 +167,46 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row" id="content">
         <div class="col-lg-12">
-            <button id="back-to-top" class="back-to-top" type="submit">
-                <img src="{% static "img/btn_top.png" %}" width="25" height="25">
-            </button>            <!--<a id="back-to-top" href="#" class="back-to-top" role="button" data-toggle="tooltip" data-placement="left" ><img src="{% static "img/btn_top.png" %}" width="25" height="25"></a>-->
+            <div class="content" id="content">
+            <!--<a id="back-to-top" href="#" class="back-to-top" role="button" data-toggle="tooltip" data-placement="left" ><img src="{% static "img/btn_top.png" %}" width="25" height="25"></a>-->
+
             {% block content %}{% endblock %}
         </div>
-
+            <div class="nav_up" id="nav_up"></div>
     </div>
 </div> <!-- /container -->
 <script src="{% static "js/jquery.min.js" %}"></script>
 <script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/scroll-startstop.events.jquery.js" %}"></script>
 <script src="{% static "js/main.js" %}"></script>
-<!--<script src="http://django-alt9400d3.rhcloud.com/static/js/jquery.min.js"></script>-->
-<!--<script src="http://django-alt9400d3.rhcloud.com/static/js/bootstrap.min.js"></script>-->
-<!--<script src="http://django-alt9400d3.rhcloud.com/static/js/main.js"></script>-->
+
+    <div class="nav_down" id="nav_down"></div>
 <script>
-$(document).ready(function(){
-     $('#back-to-top').fadeOut();
-     $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('#back-to-top').fadeIn();
-            } else {
-                $('#back-to-top').fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        $('#back-to-top').click(function () {
-            $('#back-to-top').tooltip('hide');
-            $('body,html').animate({
-                scrollTop: 0
-            }, 300);
-            return false;
-        });
+			$(function() {
+				var $elem = $('#content');
 
-        $('#back-to-top').tooltip('show');
+				$('#nav_up').fadeIn('slow');
+				$('#nav_down').fadeIn('slow');
 
-});
+				$(window).bind('scrollstart', function(){
+					$('#nav_up,#nav_down').stop().animate({'opacity':'0.2'});
+				});
+				$(window).bind('scrollstop', function(){
+					$('#nav_up,#nav_down').stop().animate({'opacity':'1'});
+				});
+
+				$('#nav_down').click(
+					function (e) {
+						$('html, body').animate({scrollTop: $elem.height()}, 800);
+					}
+				);
+				$('#nav_up').click(
+					function (e) {
+						$('html, body').animate({scrollTop: '0px'}, 800);
+					}
+				);
+            });
 </script>
 
 
