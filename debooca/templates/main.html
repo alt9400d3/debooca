@@ -29,8 +29,7 @@
             <a class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse">
                 <i class="fa fa-chevron-down faa-vertical animated"></i>
             </a>
-            <a tabindex="0" class="navbar-brand faa-pulse faa-slow animated" data-toggle="popover" data-trigger="focus" data-html="true" data-placement="bottom" data-title="Brand Quote..." data-content="<img class='img-responsive' height='140' width='140' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='/<p>Your Brand Image</p>">
-                <!--<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>-->
+            <a tabindex="0" class="navbar-brand faa-pulse faa-slow animated" data-toggle="popover" data-trigger="focus" data-html="true" data-placement="bottom">
                 <i class="fa fa-book"></i>
                 <i class="fa fa-lg">D</i>
                 <i class="fa fa-lg">E</i>
@@ -97,41 +96,22 @@
                     </a>
                 </li>
             </ul>
-
-
-
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.name }}<span class="caret"></span></a>
-                    <!--<ul class="dropdown-menu" role="menu">-->
-                        <!--<div class="row-fluid">-->
-                            <!--<div class="span6"><a href="/auth/profile/"><i class="fa fa-cogs"></i> Profile</a></div>-->
-                            <!--<div class="span6"><a href="/auth/profile/"><i class="fa fa-cogs"></i>|edit</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="row-fluid">-->
-                            <!--<div class="span-12"><li><a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li></div>-->
-                        <!--</div>-->
-   <!---->
-                            <!--<div class="row">-->
-                                <!--<div class="col-xs-12 col-md-1"></div>-->
-                                <!--<div class="col-xs-12 col-md-9">-->
-                                    <!--<a href="/auth/profile/"><i class="fa fa-cogs"></i> Profile </a>|<a href="/auth/profile/"> edit<i class="fa fa-cogs"></i></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-xs-12 col-md-1"></div>-->
-                            <!--</div>-->
-                    <!--</ul>-->
-                    <ul class=" dropdown-menu list-group">
-                        <li class="list-group-item clearfix">
-                            <ul class="list-inline">
-                                <li><a href="/auth/profile/"><i class="fa fa-cogs"></i> Профиль </a></li>
-                                <li><a href="/auth/profile/"> (ред.) <i class="fa fa-cogs"></i></a></li>
-                            </ul>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> {{ user.name }} <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="/auth/profile/"><i class="fa fa-user fa-fw"></i> Профиль пользователя</a>
                         </li>
-                        <li class="list-group-item clearfix">
-                            <div class="song-title"><a href="/auth/logout"><i class="fa fa-power-off"></i> Выход</a></div>
+                        <li><a href="/auth/profile/"><i class="fa fa-gear fa-fw"></i> Редактировать профиль</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/auth/logout"><i class="fa fa-sign-out fa-fw"></i> Выход</a>
                         </li>
                     </ul>
+                    <!-- /.dropdown-user -->
                 </li>
                 {% else %}
 
