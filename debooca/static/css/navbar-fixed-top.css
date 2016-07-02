@@ -452,9 +452,15 @@ a:hover .fa
     border-radius: 5px;
     padding: 20px;
 }
-.back-to-top {
+#back-to-top {
     cursor: pointer;
+    border:5;
+    position: fixed; left: 1%; top: 50%; right: 90%;
+}
 
-
-position: fixed; left: 1%; top: 50%; right: 96%;
+.song-title {
+    float: left;
+}
+.song-duration {
+    float: left;
 }
