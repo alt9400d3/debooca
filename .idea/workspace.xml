@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84b7f3c5-e249-4b41-9e78-95941fd59c1d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" afterPath="$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/static/js/main.js" afterPath="$PROJECT_DIR$/debooca/static/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/debooca/templates/main.html" afterPath="$PROJECT_DIR$/debooca/templates/main.html" />
     </list>
     <ignored path="debooca.iws" />
@@ -72,10 +73,10 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3703704">
-              <caret line="183" column="9" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+            <state vertical-scroll-proportion="-18.703703">
+              <caret line="224" column="9" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
               <folding>
-                <marker date="1467492854915" expanded="true" signature="9117:9294" placeholder="..." />
+                <marker date="1467548814127" expanded="true" signature="9117:9294" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -96,10 +97,17 @@
       <file leaf-file-name="navbar-fixed-top.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94375">
-              <caret line="509" column="1" selection-start-line="488" selection-start-column="1" selection-end-line="509" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.71875">
+              <caret line="462" column="10" selection-start-line="462" selection-start-column="10" selection-end-line="462" selection-end-column="10" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="btn_top.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/debooca/static/img/btn_top.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -111,16 +119,6 @@
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debooca/static/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -163,8 +161,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="-744" />
+    <option name="x" value="1415" />
+    <option name="y" value="24" />
     <option name="width" value="1317" />
     <option name="height" value="744" />
   </component>
@@ -193,8 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,13 +390,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debooca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debooca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debooca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -797,7 +817,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="-744" width="1317" height="744" extended-state="6" />
+    <frame x="1415" y="24" width="1317" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -843,24 +863,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/extuser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#640#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extuser/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -899,7 +901,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding>
-            <marker date="1467492854915" expanded="true" signature="9117:9294" placeholder="..." />
+            <marker date="1467548814127" expanded="true" signature="9117:9294" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -936,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +996,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467492854915" expanded="true" signature="9117:9294" placeholder="..." />
+            <marker date="1467548814127" expanded="true" signature="9117:9294" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1087,7 +1087,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467492854915" expanded="true" signature="9117:9294" placeholder="..." />
+            <marker date="1467548814127" expanded="true" signature="9117:9294" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1156,7 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,13 +1209,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/settings.py">
+    <entry file="file://$PROJECT_DIR$/debooca/static/js/scroll-startstop.events.jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="e#326#335#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-1.08125">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debooca/static/img/icon_top.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debooca/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.06875">
+          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,36 +1239,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/static/js/scroll-startstop.events.jquery.js">
+    <entry file="file://$PROJECT_DIR$/debooca/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.08125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="e#326#335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/debooca/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3703704">
-          <caret line="183" column="9" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+        <state vertical-scroll-proportion="-18.703703">
+          <caret line="224" column="9" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="9" />
           <folding>
-            <marker date="1467492854915" expanded="true" signature="9117:9294" placeholder="..." />
+            <marker date="1467548814127" expanded="true" signature="9117:9294" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debooca/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/debooca/static/img/btn_top.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/debooca/static/css/navbar-fixed-top.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94375">
-          <caret line="509" column="1" selection-start-line="488" selection-start-column="1" selection-end-line="509" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.71875">
+          <caret line="462" column="10" selection-start-line="462" selection-start-column="10" selection-end-line="462" selection-end-column="10" />
           <folding />
         </state>
       </provider>

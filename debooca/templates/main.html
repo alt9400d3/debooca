@@ -173,42 +173,59 @@
 
             {% block content %}{% endblock %}
         </div>
-            <div class="nav_up" id="nav_up"></div>
+
     </div>
 </div> <!-- /container -->
 <script src="{% static "js/jquery.min.js" %}"></script>
 <script src="{% static "js/bootstrap.min.js" %}"></script>
 <script src="{% static "js/scroll-startstop.events.jquery.js" %}"></script>
 <script src="{% static "js/main.js" %}"></script>
+    <!--<div class="nav_up" id="nav_up"></div>-->
+    <!--<div style="display:none;" class="nav_down" id="nav_down"></div>-->
+<!--<script>-->
+			<!--$(function() {-->
+				<!--var $elem = $('#content');-->
 
-    <div class="nav_down" id="nav_down"></div>
-<script>
-			$(function() {
-				var $elem = $('#content');
+				<!--$('#nav_up').fadeIn('slow');-->
+				<!--$('#nav_down').fadeIn('slow');-->
 
-				$('#nav_up').fadeIn('slow');
-				$('#nav_down').fadeIn('slow');
+				<!--$(window).bind('scrollstart', function(){-->
+					<!--$('#nav_up,#nav_down').stop().animate({'opacity':'0.2'});-->
+				<!--});-->
+				<!--$(window).bind('scrollstop', function(){-->
+					<!--$('#nav_up,#nav_down').stop().animate({'opacity':'1'});-->
+				<!--});-->
 
-				$(window).bind('scrollstart', function(){
-					$('#nav_up,#nav_down').stop().animate({'opacity':'0.2'});
-				});
-				$(window).bind('scrollstop', function(){
-					$('#nav_up,#nav_down').stop().animate({'opacity':'1'});
-				});
+				<!--$('#nav_down').click(-->
+					<!--function (e) {-->
+						<!--$('html, body').animate({scrollTop: $elem.height()}, 800);-->
+					<!--}-->
+				<!--);-->
+				<!--$('#nav_up').click(-->
+					<!--function (e) {-->
+						<!--$('html, body').animate({scrollTop: '0px'}, 800);-->
+					<!--}-->
+				<!--);-->
+            <!--});-->
+<!--</script>-->
+<a href="#" class="scrollup">Наверх</a>
+<script type="text/javascript">
+$(document).ready(function(){
 
-				$('#nav_down').click(
-					function (e) {
-						$('html, body').animate({scrollTop: $elem.height()}, 800);
-					}
-				);
-				$('#nav_up').click(
-					function (e) {
-						$('html, body').animate({scrollTop: '0px'}, 800);
-					}
-				);
-            });
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+
+});
 </script>
-
-
 </body>
 </html>
